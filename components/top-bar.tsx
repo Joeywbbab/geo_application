@@ -9,7 +9,7 @@ export function TopBar() {
       <div className="flex h-16 items-center gap-4 px-6">
         <div className="flex items-center gap-2">
           <Select defaultValue="30d">
-            <SelectTrigger className="w-[120px] bg-background">
+            <SelectTrigger className="w-[160px] bg-background">
               <Calendar className="h-4 w-4 mr-2" />
               <SelectValue />
             </SelectTrigger>
