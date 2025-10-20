@@ -22,7 +22,7 @@ export function TopBar() {
           </Select>
 
           <Select defaultValue="all">
-            <SelectTrigger className="w-[140px] bg-background">
+            <SelectTrigger className="w-[160px] bg-background">
               <Filter className="h-4 w-4 mr-2" />
               <SelectValue />
             </SelectTrigger>
