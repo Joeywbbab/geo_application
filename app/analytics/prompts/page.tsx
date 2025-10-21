@@ -12,6 +12,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
+  DropdownMenuPortal,
 } from "@/components/ui/dropdown-menu"
 import {
   Dialog,
@@ -173,11 +174,13 @@ export default function PromptsPage() {
                 <DropdownMenuContent align="end" className="w-40">
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>Move to</DropdownMenuSubTrigger>
-                    <DropdownMenuSubContent>
-                      <DropdownMenuItem onClick={() => handleBulkMove("Active")}>Active</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => handleBulkMove("Suggested")}>Suggested</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => handleBulkMove("Inactive")}>Inactive</DropdownMenuItem>
-                    </DropdownMenuSubContent>
+                    <DropdownMenuPortal>
+                      <DropdownMenuSubContent>
+                        <DropdownMenuItem onClick={() => handleBulkMove("Active")}>Active</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleBulkMove("Suggested")}>Suggested</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleBulkMove("Inactive")}>Inactive</DropdownMenuItem>
+                      </DropdownMenuSubContent>
+                    </DropdownMenuPortal>
                   </DropdownMenuSub>
                   <DropdownMenuItem onClick={handleBulkDelete} className="text-destructive">
                     Delete
